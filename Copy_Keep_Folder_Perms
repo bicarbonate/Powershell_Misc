@@ -1,0 +1,10 @@
+# Script to copy new projects template dir structure #
+
+$source_path = 'D:\GDrive\folder'
+$dest_path = 'D:\GDrive\'
+$new_folder = read-host "Enter new Project folder name"
+new-item -path $dest_path -name $new_folder -itemtype directory
+#invoke-item $dest_path
+
+#Change Projects folder annually
+robocopy .\ "..\Projects 2019A\$new_folder" /E /copy:dats /XF resear* copy_*

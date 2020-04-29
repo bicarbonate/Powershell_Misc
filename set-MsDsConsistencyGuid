@@ -1,0 +1,6 @@
+$accountname = "domain\ad_forest"
+$forestdn = "dc=domain,dc=extension"
+$cmd = "dsacls '$forestdn' /I:S /G '`"$accountname`":WP;ms-ds-consistencyGuid;user'"
+invoke-expression $cmd
+
+#This script will set the specified account to have permissions to read the MS-DS-ConsistencyGuid attribute for AAD Connect to sync properly.

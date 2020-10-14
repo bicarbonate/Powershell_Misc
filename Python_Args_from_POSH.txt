@@ -1,0 +1,6 @@
+$env:Path += ";c:\Program Files\lcpython15";
+$env:PATHEXT += ";.py"; 
+$arg1 = "Test3" 
+$arg2 = "Testing" 
+$arg3 = 'c:\ProgramData\set_cust_attr.py' 
+python $arg3 $arg1 $arg2   
